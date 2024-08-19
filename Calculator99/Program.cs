@@ -37,6 +37,10 @@ else if (operation == '+')
 {
     Console.WriteLine($"Рішенням математичної задачі є: {a + b}");
 }
+else if (operation == '^')
+{
+    Console.WriteLine($"Рішенням математичної задачі є: {Math.Pow(a,b)}");
+}
 else
 {
     Console.WriteLine("Вираз не має змісту");
