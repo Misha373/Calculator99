@@ -9,40 +9,35 @@ double b = Convert.ToDouble(Console.ReadLine());
 
 Console.WriteLine("Введіть операццію між числами a і b:");
 
-char operation = Convert.ToChar(Console.ReadLine());
+string? operation = Convert.ToString(Console.ReadLine());
 
 
-
-
- if (operation == '/')
+switch(operation)
 {
-  if (b == 0)
-    {
+    case "/":
+        switch(b)
+        {
+            case 0:
+                Console.WriteLine("Вираз не має змісту");
+                break;
+            default:
+                Console.WriteLine($"Рішенням математичної задачі є: {a / b}");
+                break;
+        }
+        break;
+    case "*":
+        Console.WriteLine($"Рішенням математичної задачі є: {a * b}");
+        break;
+    case "+":
+        Console.WriteLine($"Рішенням математичної задачі є: {a + b}");
+        break;
+    case "-":
+        Console.WriteLine($"Рішенням математичної задачі є: {a - b}");
+        break;
+    case "^":
+        Console.WriteLine($"Рішенням математичної задачі є: {a * b}");
+        break;
+    default:
         Console.WriteLine("Вираз не має змісту");
-    }
-  else
-    {
-        Console.WriteLine($"Рішенням математичної задачі є: {a/b}");
-    }
+        break;
 }
-else if (operation == '*')
-{
-    Console.WriteLine($"Рішенням математичної задачі є: {a * b}");
-}
- else if (operation == '-')
-{
-    Console.WriteLine($"Рішенням математичної задачі є: {a - b}");
-}
-else if (operation == '+')
-{
-    Console.WriteLine($"Рішенням математичної задачі є: {a + b}");
-}
-else if (operation == '^')
-{
-    Console.WriteLine($"Рішенням математичної задачі є: {Math.Pow(a,b)}");
-}
-else
-{
-    Console.WriteLine("Вираз не має змісту");
-}
-
